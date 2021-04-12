@@ -26,6 +26,7 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 ## Dir bruteforce:
 
 `gobuster dir -u MACHINE_IP -w /usr/share/wordlists/dirb/common.txt`
+
 ===============================================================
 ```
 /.hta (Status: 403)
